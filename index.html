@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-image: url("img/background.png");
+            background-repeat:no-repeat;
+            background-size:100% 100%;/*达到窗口的百分百比例*/
+            background-attachment: fixed;/*图片固定，随着页面滚动而移动*/
+        }
+        .a_top{
+            color: rgb(255, 255, 255);
+            margin-left:50px;
+            margin-right:50px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .a_top:hover{
+            color: rgb(255, 0, 0);
+            font-size: 150%;
+        }
+        .content{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.744);
+            margin-left: 20%;
+            margin-right: 20%;
+            padding: 10%;
+        }
+        .fotter{
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: large;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+ <!--logo-->
+    <div style="background-color: white;display: flex;justify-content: space-between;">
+        <a href="first_page.html">
+                <img style="width: 200px;border-right :2px solid black;" src="img/logo.jpg">
+        </a>
+        <input style="font-size: 20px;margin:40px;">
+    </div>
+    <!--导航栏-->
+    <div style="background-color:black;padding: 10px;">
+        <a class="a_top" style="color: red;font-size:150%" href="first_page.html">
+            首页
+        </a>
+        <a class="a_top" href="memory.html">
+            点滴
+        </a>
+        <a class="a_top" href="goals.html">
+            目标
+        </a>
+        <a class="a_top" href="project.html">
+            项目
+        </a>
+        <a class="a_top" href="log_in.html">
+            <span style="float: right;clear: both;margin-right: 50px;">登录</span>
+        </a>
+    </div>
+    <!--内容区域-->
+    <div class="content">
+        <p> &nbsp&nbsp&nbsp&nbsp你好， 此网站是我做的第一个比较成功的网站。其实在这之前我已经尝试做了好几个网站，
+            但都不是很理想（和别人的比较很丑）。我想是因为一开始实在是不知从何下手，尤其是网页的布局，我钻研了
+            相当长的时间，仍是不知道怎样对网站进行布局。所幸，我在一次次的失败中总结经验，不断去查找编写网页的相关资料，
+            这次的成果我很满意，虽然还只是一个雏形，却已经具备一个合格、成熟的网站的
+            相关功能。
+        </p>
+        <p>
+            &nbsp&nbsp&nbsp&nbsp最后，我想我明白了学习需要坚持不懈的毅力。
+        </p>
+    </div>
+    <!--底部区域-->
+    <div class="fotter">
 
+        <p>营业执照</p>
+    </div>
+</body>
+</html>
