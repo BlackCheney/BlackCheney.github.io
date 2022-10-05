@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOBBY</title>
+    <title>点滴</title>
     <link rel="shortcut icon" href="img/favicon.ico">
     <style>
         * {
@@ -36,26 +36,11 @@
         .content {
             color: rgb(255, 255, 255);
             font-size: 20px;
-            background-color: rgba(0, 0, 0, 0.744);
-            margin-left: 20%;
-            margin-right: 20%;
-            padding: 5%;
-        }
-
-        .row {
-            display: flex;
-            justify-content: space-evenly;
-            margin: 1%;
-        }
-
-        .column {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .pictures {
-            width: 25%;
-            border: 5px solid black;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.662);
+            margin-left: 15%;
+            margin-right: 15%;
+            padding: 15%;
         }
 
         .fotter {
@@ -64,6 +49,67 @@
             text-align: center;
             font-size: large;
             padding: 20px;
+        }
+
+        .img1 {
+            display: block;
+            width: 100%;
+            border: 3px solid black;
+        }
+
+        .img2 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+        }
+
+        .img3 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+
+        .img4 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+
+        .img5 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+
+        .img6 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+
+        .img7 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+
+        .img8 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+
+        .img9 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
         }
     </style>
 </head>
@@ -88,51 +134,48 @@
         <a class="a_top" href="music.html">
             音乐
         </a>
-        <a class="a_top" href="project.html">
-            项目
+        <a class="a_top" href="video.html">
+            视频
         </a>
-        <a class="a_top" href="log_in.html">
-            <span style="float: right;clear: both;margin-right: 50px;">登录</span>
+        <a class="a_top" href="project.html">
+            计划
+        </a>
+        <a style="margin-left: 33%;margin-right: 0" class="a_top" href="log_in.html">
+            登录
         </a>
     </div>
+
     <!--内容区域-->
-    <div class="column content">
-        <div class="row">不是最终样式</div>
-        <div class="row">
-            <img class="pictures" src="img/IMG_20221001_142222.jpg">
-            <img class="pictures" src="img/IMG_20221001_142438.jpg">
-            <img class="pictures" src="img/IMG_20221001_144500.jpg">
-        </div>
-        <div class="row">
-            <p style="color: white;font-size:30px;">火车</p>
-            <p style="color: white;font-size:30px;">锦鲤</p>
-            <p style="color: white;font-size:30px;">鹦鹉</p>
-        </div>
-        <div class="row">
-            <img class="pictures" src="img/IMG_20221001_151609.jpg">
-            <img class="pictures" src="img/IMG_20221001_153811.jpg">
-            <img class="pictures" src="img/IMG_20221001_153907.jpg">
-        </div>
-        <div class="row">
-            <p style="color: white;font-size:30px">白马</p>
-            <p style="color: white;font-size:30px">泳池</p>
-            <p style="color: white;font-size:30px">金佛</p>
-        </div>
-        <div class="row">
-            <img class="pictures" src="img/IMG_20221001_144839.jpg">
-            <img class="pictures" src="img/IMG_20221001_150700.jpg">
-            <img class="pictures" src="img/IMG_20221001_154016.jpg">
-        </div>
-        <div class="row">
-            <p style="color: white;font-size:30px">孔雀</p>
-            <p style="color: white;font-size:30px">鸵鸟</p>
-            <p style="color: white;font-size:30px">塔楼</p>
-        </div>
+    <div class="content">
+        <img class="img-slide img1" src="img/IMG_20221001_142222.jpg">
+        <img class="img-slide img2" src="img/IMG_20221001_142438.jpg">
+        <img class="img-slide img3" src="img/IMG_20221001_144500.jpg">
+        <img class="img-slide img4" src="img/IMG_20221001_144839.jpg">
+        <img class="img-slide img5" src="img/IMG_20221001_150700.jpg">
+        <img class="img-slide img6" src="img/IMG_20221001_151609.jpg">
+        <img class="img-slide img7" src="img/IMG_20221001_153811.jpg">
+        <img class="img-slide img8" src="img/IMG_20221001_153907.jpg">
+        <img class="img-slide img9" src="img/IMG_20221001_154016.jpg">
     </div>
     <!--底部区域-->
     <div class="fotter">
         <p>营业执照</p>
     </div>
+    <script>
+        var index = 0;
+        //效果
+        function ChangeImg() {
+            index++;
+            let a = document.getElementsByClassName("img-slide");
+            if (index >= a.length) index = 0;
+            for (let i = 0; i < a.length; i++) {
+                a[i].style.display = 'none';
+            }
+            a[index].style.display = 'block';
+        }
+        //设置定时器，每隔两秒切换一张图片
+        setInterval(ChangeImg, 3000);
+    </script>
 </body>
 
 </html>

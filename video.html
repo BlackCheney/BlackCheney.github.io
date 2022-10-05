@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录</title>
+    <title>视频</title>
     <link rel="shortcut icon" href="img/favicon.ico">
     <style>
         * {
@@ -23,7 +23,8 @@
 
         .a_top {
             color: rgb(255, 255, 255);
-            margin: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
             text-decoration: none;
             font-size: 20px;
         }
@@ -36,16 +37,15 @@
         .content {
             color: rgb(255, 255, 255);
             font-size: 20px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.662);
+            background-color: rgba(0, 0, 0, 0.744);
             margin-left: 15%;
             margin-right: 15%;
-            padding: 15%;
+            padding: 10%;
         }
 
         .fotter {
             background-color: black;
-            color: rgb(255, 255, 255);
+            color: white;
             text-align: center;
             font-size: large;
             padding: 20px;
@@ -72,27 +72,25 @@
         <a class="a_top" href="music.html">
             音乐
         </a>
-        <a class="a_top" href="video.html">
+        <a class="a_top" style="color: red;font-size:150%" href="video.html">
             视频
         </a>
         <a class="a_top" href="project.html">
             计划
         </a>
-        <a style="margin-left: 33%;margin-right: 0;color: red;font-size:150%" class="a_top" href="log_in.html">
+        <a style="margin-left: 33%;margin-right: 0" class="a_top" href="log_in.html">
             登录
         </a>
     </div>
     <!--内容区域-->
     <div class="content">
-        <p>账号：<input type="text"></p>
-        <p>密码：<input type="password"></p>
-        <br>
-        <a class="a_top" style="font-size: 100%;" href="#">注册账号</a>
-        <a class="a_top" style="font-size: 100%;" href="#">忘记密码</a>
+        <video width="600px" controls>
+            <source src="video/c6ecb6df532f189ce1d131b7023c5d58.mp4" type="video/mp4">
+            您的浏览器不支持Video标签。
+        </video>
     </div>
     <!--底部区域-->
     <div class="fotter">
-
         <p>营业执照</p>
     </div>
 </body>
