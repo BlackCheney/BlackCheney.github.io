@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点滴</title>
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .img1 {
+            display: block;
+            width: 100%;
+            border: 3px solid black;
+        }
+
+        .img2 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+        }
+
+        .img3 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+
+        .img4 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+
+        .img5 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+
+        .img6 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+
+        .img7 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+
+        .img8 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+
+        .img9 {
+            display: none;
+            width: 100%;
+            border: 3px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--logo-->
+    <div style="background-color: white;display: flex;justify-content: space-between;">
+        <a href="index.html">
+            <img style="width: 200px;border-right :2px solid black;" src="../img/logo.jpg">
+        </a>
+
+        <input style="font-size: 20px;margin:40px;">
+    </div>
+    <!--导航栏-->
+    <div style="background-color:black;padding: 10px;">
+        <a class="a_top" href="index.html">
+            首页
+        </a>
+        <a class="a_top" style="color: #fcf00a" href="memory.html">
+            点滴
+        </a>
+        <a class="a_top" href="music.html">
+            音乐
+        </a>
+        <a class="a_top" href="video.html">
+            视频
+        </a>
+        <a class="a_top" href="project.html">
+            计划
+        </a>
+        <a style="margin-left: 45%;margin-right: 0" class="a_top" href="log_in.html">
+            登录
+        </a>
+    </div>
+
+    <!--内容区域-->
+    <div class="content">
+        <img class="img-slide img1" src="../img/IMG_20221001_142222.jpg">
+        <img class="img-slide img2" src="../img/IMG_20221001_142438.jpg">
+        <img class="img-slide img3" src="../img/IMG_20221001_144500.jpg">
+        <img class="img-slide img4" src="../img/IMG_20221001_144839.jpg">
+        <img class="img-slide img5" src="../img/IMG_20221001_150700.jpg">
+        <img class="img-slide img6" src="../img/IMG_20221001_151609.jpg">
+        <img class="img-slide img7" src="../img/IMG_20221001_153811.jpg">
+        <img class="img-slide img8" src="../img/IMG_20221001_153907.jpg">
+        <img class="img-slide img9" src="../img/IMG_20221001_154016.jpg">
+    </div>
+    <!--底部区域-->
+    <div class="fotter">
+        <p>营业执照</p>
+    </div>
+    <script>
+        var index = 0;
+        //效果
+        function ChangeImg() {
+            index++;
+            let a = document.getElementsByClassName("img-slide");
+            if (index >= a.length) index = 0;
+            for (let i = 0; i < a.length; i++) {
+                a[i].style.display = 'none';
+            }
+            a[index].style.display = 'block';
+        }
+        //设置定时器，每隔两秒切换一张图片
+        setInterval(ChangeImg, 3000);
+    </script>
+</body>
+
+</html>

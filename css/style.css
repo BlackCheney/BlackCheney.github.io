@@ -1,0 +1,44 @@
+        * {
+            margin: 0;
+            color: rgb(255, 255, 255);
+        }
+        hr{
+            border: 1px solid rgb(255, 255, 255);
+        }
+        body {
+            background-image: url("../img/background.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            /*达到窗口的百分百比例*/
+            background-attachment: fixed;
+            /*图片固定，随着页面滚动而移动*/
+        }
+
+        .a_top {
+            color: rgb(255, 255, 255);
+            margin-left: 4%;
+            margin-right: 1%;
+            text-decoration: none;
+            font-size: 22px;
+        }
+
+        .a_top:hover {
+            color: #fcf00a;
+        }
+
+        .content {
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.847);
+            margin-left: 15%;
+            margin-right: 15%;
+            padding: 10%;
+        }
+
+        .fotter {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: large;
+            padding: 20px;
+        }
