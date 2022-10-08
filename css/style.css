@@ -26,6 +26,20 @@
             background-attachment: fixed;
         }
 
+        .find {
+            position: absolute;
+            right: 5%;
+            top: 38%;
+            font-size: 125%;
+            border-radius: 5px;
+            width: 4%;
+            transition: width 1s;
+        }
+
+        .find:hover {
+            width: 20%;
+        }
+
         .a_top {
             color: rgb(255, 255, 255);
             margin-left: 3%;
@@ -76,19 +90,9 @@
             background-color: rgb(255, 255, 255);
             color: rgb(0, 0, 0);
             cursor: pointer;
-
         }
 
         button:active {
             box-shadow: 0 3px #999;
             transform: translate(0, 2px);
-        }
-
-        a img {
-            transition: transform 3s;
-
-        }
-
-        a img:active {
-            transform: translate(300%, 0);
         }
