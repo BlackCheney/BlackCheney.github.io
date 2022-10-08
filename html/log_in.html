@@ -8,15 +8,17 @@
     <title>登录</title>
     <link rel="shortcut icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
     <!--logo-->
-    <div style="background-color: white;display: flex;justify-content: space-between;">
-        <a href="index.html">
-            <img style="width: 200px;border-right :2px solid black;" src="../img/logo.jpg">
+    <div
+        style=" background-image: linear-gradient(to right, #fcf00aea, #00eeffe4);position: relative;position: relative;overflow: visible;">
+        <a style="margin: 0;" href="index.html">
+            <img style="width: 17%;" src="../img/logo.jpg">
         </a>
-        <input style="font-size: 20px;margin:40px;">
+        <input style="position: absolute;left:70%;top:38%;bottom:38%;font-size: 24px;border-radius: 5px;" type="text">
     </div>
     <!--导航栏-->
     <div style="background-color:black;padding: 10px;">
@@ -35,23 +37,24 @@
         <a class="a_top" href="project.html">
             计划
         </a>
-        <a style="margin-left: 45%;margin-right: 0;color:#fcf00a" class="a_top" href="log_in.html">
+        <a style="position: absolute;right: 2%;" class="a_top" href="log_in.html">
             登录
         </a>
     </div>
     <!--内容区域-->
     <div class="content" style="text-align: center;">
-        <p>账号：<input type="text"></p>
-        <p>密码：<input type="password"></p>
-        <br>
-        <a class="a_top" style="font-size: 100%;" href="#">注册账号</a>
-        <a class="a_top" style="font-size: 100%;" href="#">忘记密码</a>
+        <form style="padding: 10%;">
+            <input type="text" placeholder="账号"><br>
+            <input type="password" placeholder="密码"><br>
+            <button style="margin-right: 5%;">登录</button>
+            <button style="margin-left: 5%;">注册</button>
+        </form>
     </div>
     <!--底部区域-->
     <div class="fotter">
-
         <p>营业执照</p>
     </div>
+    <script type="text/javascript" src="../js/script.js"></script>
 </body>
 
 </html>
