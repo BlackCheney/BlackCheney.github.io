@@ -18,7 +18,7 @@
         <a style="margin: 0;" href="index.html">
             <img style="width: 17%;" src="../img/logo.jpg">
         </a>
-        <input style="position: absolute;left:70%;top:38%;bottom:38%;font-size: 24px;border-radius: 5px;" type="text">
+        <input class="find" placeholder="搜索" type="text">
     </div>
     <!--导航栏-->
     <div style="background-color:black;padding: 10px;">
@@ -44,17 +44,45 @@
     <!--内容区域-->
     <div class="content" style="text-align: center;">
         <form style="padding: 10%;">
-            <input type="text" placeholder="账号"><br>
-            <input type="password" placeholder="密码"><br>
-            <button style="margin-right: 5%;">登录</button>
-            <button style="margin-left: 5%;">注册</button>
+            <input id="account" type="text" placeholder="账号"><br>
+            <input id="password" type="password" placeholder="密码"><br>
+            <button id="login" style="margin-right: 5%;" type="button">登录</button>
+            <button id="enroll" style="margin-left: 5%;">注册</button>
+            <h1 id="welcome" style="display: none;">欢迎</h1>
         </form>
     </div>
     <!--底部区域-->
     <div class="fotter">
         <p>营业执照</p>
     </div>
-    <script type="text/javascript" src="../js/script.js"></script>
+    <script>
+        //注册交互
+        document.getElementById("enroll").addEventListener("click", enroll)
+        function enroll() {
+            if (!(window.localStorage[0]) && !(window.localStorage[1]))
+                alert("请输入");
+            else if (window.localStorage[0] && window.localStorage[1])
+                alert("已重新覆盖");
+            window.localStorage[0] = document.getElementById("account").value;
+            window.localStorage[1] = document.getElementById("password").value;
+        }
+        //登录交互
+        document.getElementById("login").addEventListener("click", login)
+        function login() {
+            if (!(window.localStorage[0]) && !(window.localStorage[1]))
+                alert("您未注册账号与密码");
+            else if (window.localStorage[0] === document.getElementById("account").value && window.localStorage[1] === document.getElementById("password").value) {
+                alert("输入正确");
+                document.getElementById("account").style.display = "none";
+                document.getElementById("password").style.display = "none";
+                document.getElementById("login").style.display = "none";
+                document.getElementById("enroll").style.display = "none";
+                document.getElementById("welcome").style.display = "block";
+            }
+            else
+                alert("输入错误");
+        }
+    </script>
 </body>
 
 </html>
