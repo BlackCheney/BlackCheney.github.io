@@ -43,19 +43,43 @@
     </div>
     <!--内容区域-->
     <div class="content">
-        <h1>前言</h1>
-        <hr>
-        <br>
-        <br>
-        <h1>
-            一个有赛博朋克风格的网站
-        </h1>
+        <h1></h1>
+        <p style="text-align: center;margin-top: 20%;margin-bottom: 20%;"><input id="text" type=text
+                placeholder="你最想做的事情是什么"
+                style="background-color: rgba(255, 255, 255, 0);text-align: center;outline:0;border-top: 0 ;border-left: 0;border-right: 0;font-size: 150%;">
+            <button id="mark" type="button"
+                style="cursor: pointer;background-color: rgba(255, 255, 255, 0);border: 0;top:20%">√</button>
+        </p>
     </div>
     <!--底部区域-->
     <div class="fotter">
 
         <p>营业执照</p>
     </div>
+    <script>
+        if (window.localStorage.getItem("text") && window.localStorage.getItem("mark")) {
+            document.getElementById("text").value = window.localStorage.getItem("text");
+            document.getElementById("mark").innerText = window.localStorage.getItem("mark");
+        }
+
+        document.getElementById("mark").addEventListener("click", confirm);
+        function confirm() {
+            if (document.getElementById("mark").innerHTML === "x") {
+                document.getElementById("mark").innerHTML = "√";
+                document.getElementById("text").value = "";
+                window.localStorage.removeItem("text");
+                window.localStorage.setItem("mark", "√");
+            }
+
+            else if (document.getElementById("mark").innerHTML === "√") {
+                document.getElementById("mark").innerHTML = "x";
+                document.getElementById("text").value = document.getElementById("text").value;
+                window.localStorage.setItem("text", document.getElementById("text").value);
+                window.localStorage.setItem("mark", "x");
+            }
+
+        }
+    </script>
 </body>
 
 </html>

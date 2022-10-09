@@ -44,11 +44,42 @@
     <!--内容区域-->
     <div class="content" style="text-align: center;">
         <form style="padding: 10%;">
+            <b id="tip" style="color: red;"></b><br>
             <input id="account" type="text" placeholder="账号"><br>
             <input id="password" type="password" placeholder="密码"><br>
             <button id="login" style="margin-right: 5%;" type="button">登录</button>
-            <button id="enroll" style="margin-left: 5%;">注册</button>
-            <h1 id="welcome" style="display: none;">欢迎</h1>
+            <button id="enroll" style="margin-left: 5%;" type="button">注册</button>
+            <!--登录用户可见-->
+            <div style="display: flex;flex-direction: row;justify-content: space-between;">
+                <div style=" display: flex;flex-direction: column;width: 40%;text-align: center;">
+                    <h1 class="hidden" style="display:none">网站</h1>
+                    <hr class="hidden" style="display:none">
+                    <a class="hidden" style="display:none" href="index.html">个人网站（完备中）</a>
+                    <br class="hidden" style="display:none">
+                    <h1 class="hidden" style="display:none">游戏</h1>
+                    <hr class="hidden" style="display:none">
+                    <a class="hidden" style="display:none" href="#">RPG游戏（未完成）</a>
+                    <br class="hidden" style="display:none">
+                    <h1 class="hidden" style="display:none">软件</h1>
+                    <hr class="hidden" style="display:none">
+                    <a class="hidden" style="display:none" href="#">MMD（未完成）</a>
+                    <a class="hidden" style="display:none" href="#">unity（未完成）</a>
+                    <a class="hidden" style="display:none" href="#">matlab（未完成）</a>
+                </div>
+                <div style="display: flex;flex-direction: column;width: 40%;text-align: center;">
+                    <h1 class="hidden" style="display:none">应用</h1>
+                    <hr class="hidden" style="display:none">
+                    <a class="hidden" style="display:none" href="#">微信程序（未完成）</a>
+                    <br class="hidden" style="display:none">
+                    <h1 class="hidden" style="display:none">绘画</h1>
+                    <hr class="hidden" style="display:none">
+                    <a class="hidden" style="display:none" href="../project/IMG_20220326_094812.jpg">第一张画</a>
+                    <br class="hidden" style="display:none">
+                    <h1 class="hidden" style="display:none">音乐</h1>
+                    <hr class="hidden" style="display:none">
+                    <a class="hidden" style="display:none" href="#">创曲（未完成）</a>
+                </div>
+            </div>
         </form>
     </div>
     <!--底部区域-->
@@ -56,31 +87,35 @@
         <p>营业执照</p>
     </div>
     <script>
+
         //注册交互
         document.getElementById("enroll").addEventListener("click", enroll)
         function enroll() {
-            if (!(window.localStorage[0]) && !(window.localStorage[1]))
-                alert("请输入");
-            else if (window.localStorage[0] && window.localStorage[1])
-                alert("已重新覆盖");
+            if (!(window.localStorage[0]) || !(window.localStorage[1]))
+                document.getElementById("tip").innerHTML = "请输入";
+            if (document.getElementById("account") && document.getElementById("password"))
+                document.getElementById("tip").innerHTML = "已注册";
             window.localStorage[0] = document.getElementById("account").value;
             window.localStorage[1] = document.getElementById("password").value;
         }
         //登录交互
         document.getElementById("login").addEventListener("click", login)
         function login() {
-            if (!(window.localStorage[0]) && !(window.localStorage[1]))
-                alert("您未注册账号与密码");
+            if (!(window.localStorage[0]) || !(window.localStorage[1]))
+                document.getElementById("tip").innerHTML = "未注册";
             else if (window.localStorage[0] === document.getElementById("account").value && window.localStorage[1] === document.getElementById("password").value) {
                 alert("输入正确");
                 document.getElementById("account").style.display = "none";
                 document.getElementById("password").style.display = "none";
                 document.getElementById("login").style.display = "none";
                 document.getElementById("enroll").style.display = "none";
-                document.getElementById("welcome").style.display = "block";
+                document.getElementById("tip").style.display = "none";
+                let list = document.getElementsByClassName("hidden");
+                for (let i = 0; i < list.length; i++)
+                    list[i].style.display = "block";
             }
             else
-                alert("输入错误");
+                document.getElementById("tip").innerHTML = "输入错误";
         }
     </script>
 </body>
