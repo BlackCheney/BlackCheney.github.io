@@ -1,6 +1,7 @@
         * {
             margin: 0;
             font-size: 20px;
+            /*border: 1px solid red;*/
         }
 
         hr {
@@ -77,22 +78,22 @@
             width: 50%;
         }
 
-        button {
+        form button {
             border-radius: 15px;
             width: 15%;
             box-shadow: 0 6px #999;
             border: none;
             background-color: black;
             color: white;
+            text-align: center;
         }
 
-        button:hover {
+        form button:hover {
             background-color: rgb(255, 255, 255);
             color: rgb(0, 0, 0);
             cursor: pointer;
         }
 
         button:active {
-            box-shadow: 0 3px #999;
-            transform: translate(0, 2px);
+            transform: translate(0, 4px);
         }
